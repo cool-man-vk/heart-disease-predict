@@ -103,3 +103,31 @@ button:hover , button:focus {
         flex-direction: column;
     }
 }
+
+form {
+    display:flex;
+    flex-direction: column;
+}
+.form-container {
+    border:2px solid black;
+    border-radius: 15px;
+    padding:8px;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top: 30px;
+}
+.input-elements {
+    padding:8px;
+    border-radius: 10px;
+    border:2px solid black;
+    outline:none;
+}
+.input-elements:focus {
+    border:2px solid blue;
+    box-shadow: 0 0 2px blue;
+}
+label , .input-elements {
+    margin:10px;
+    font-weight: bold;
+    font-size: 18px;
+}
