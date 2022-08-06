@@ -1,0 +1,14 @@
+{% extends '../base/nav.html' %}
+
+{% block title %}
+  Welcome - predict your heart disease
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+        <div class="inner">
+            <h4 style="text-align:center;" class="quote">No Beauty shines better than a heart's desire.</h4>
+            <a href="{% url 'analyseResult' %}"><button>Predict my heart disease</button></a>
+        </div>
+  </div>
+{% endblock content %}

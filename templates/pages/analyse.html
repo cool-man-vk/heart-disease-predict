@@ -1,0 +1,52 @@
+{% extends '../base/nav.html' %}
+
+{% block title %}
+    Analyse heart disease
+{% endblock title %}
+
+{% block content %}
+    <div class="form-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="">Age</label>
+            <input type="number" name="age" id="">
+            <label for="">Sex</label>
+            <select name="sex" id="">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="">Chestpain Type</label>
+            <select name="cpt" id="">
+                <option value="1">1 - Typical type</option>
+                <option value="2">2 - Typical type-angina</option>
+                <option value="3">3 - Non-angina type</option>
+                <option value="4">4 - Asymptomatic</option>
+            </select>
+            <label for="">TrestBps (Resting Blood pressure)</label>
+            <input type="number" name="trest_bps" id="">
+            <label for="">Serum Cholestrol</label>
+            <input type="number" name="scl" />
+            <label for="">Fasting Blood Sugar</label>
+            <input type="number" name="fbs" />
+            <label>RestECG - (Rested Electrographic results) </label>
+            <select name="rest-ecg" id="">
+                <option value="0">0 - Normal</option>
+                <option value="1">1 - having ST-T wave abnormal</option>
+                <option value="2">2 - left ventricular hypertrophy</option>
+            </select>
+            <label>Thalach - Maximum heart rate achieved</label>
+            <input type="number" name="thalach" />
+            <label>Old Peak - ST depression induced by exercise relative to rest</label>
+            <input type="number" name="old_peak" />
+            <label>Exang - Exercise induced agina</label>
+            <select name="exang">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <label>ca => Number of major vessels colored by fluoroscopy(0-3)</label>
+            <input type="number" name="ca" />
+            
+            <input type="submit" value="Get my Results">
+        </form>
+    </div>
+{% endblock content %}
